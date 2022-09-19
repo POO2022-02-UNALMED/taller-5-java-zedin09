@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Zoologico {
     private String nombre;
     private String ubicacion;
-    private ArrayList<Zona> zona;
+    private ArrayList<Zona> zona = new ArrayList<>();
 
     public Zoologico(String nombre, String ubicacion, ArrayList<Zona> zona) {
         this.nombre = nombre;
