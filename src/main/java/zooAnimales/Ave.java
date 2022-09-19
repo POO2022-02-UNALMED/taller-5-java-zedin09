@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Ave extends Animal{
 
-    private static ArrayList<Ave> listado;
+    private static ArrayList<Ave> listado = new ArrayList<>();
     public static int halcones;
     public static int  aguilas;
     private String colorPlumas;
@@ -18,12 +18,18 @@ public class Ave extends Animal{
     public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
         super(nombre, edad, habitat, genero);
         this.colorPlumas = colorPlumas;
+        Ave.listado.add(this);
     }
 
-    public Ave(){}
+    public Ave(){
+        Ave.listado.add(this);
+    }
 
     public static int cantidadAves(){
-        return Ave.listado.size();
+        if (Ave.listado != null){
+            return Ave.listado.size();
+        }
+        else{return 0;}
     }
 
     @Override
