@@ -56,7 +56,7 @@ public class Animal {
                     ", habito en '" + this.habitat +
                     " y mi genero es " + this.genero +
                     ", la zona en la que me ubico es " + this.zona +
-                    ", en el " + this.zona.getZoo()[0];
+                    ", en el " + this.zona.getZoo();
         }
     }
 

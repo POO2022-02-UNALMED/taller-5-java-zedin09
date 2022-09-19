@@ -15,6 +15,11 @@ public class Zona {
         this.animales = animales;
     }
 
+    public Zona(String nombre, Zoologico[] zoo) {
+        this.nombre = nombre;
+        this.zoo = zoo;
+    }
+
     public Zona() {}
 
     public void agregarAnimales(Animal animal){
@@ -33,8 +38,8 @@ public class Zona {
         this.nombre = nombre;
     }
 
-    public Zoologico[] getZoo() {
-        return zoo;
+    public Zoologico getZoo() {
+        return this.zoo[0];
     }
 
     public void setZoo(Zoologico[] zoo) {
@@ -48,4 +53,6 @@ public class Zona {
     public void setAnimales(ArrayList<Animal> animales) {
         this.animales = animales;
     }
+
+
 }
