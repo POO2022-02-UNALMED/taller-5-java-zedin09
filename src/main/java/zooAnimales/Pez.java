@@ -18,6 +18,12 @@ public class Pez extends Animal{
         this.cantidadAletas = cantidadAletas;
     }
 
+    public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+        super(nombre, edad, habitat, genero);
+        this.colorEscamas = colorEscamas;
+        this.cantidadAletas = cantidadAletas;
+    }
+
     public Pez(){}
 
     public static int cantidadPeces(){
@@ -29,13 +35,13 @@ public class Pez extends Animal{
         return "nadar";
     }
 
-    public void crearSalmon(String nombre, int edad, String genero, Zona zona){
-        Pez.listado.add(new Pez(nombre, edad, "oceano", genero, zona, "rojo", 6));
+    public void crearSalmon(String nombre, int edad, String genero){
+        Pez.listado.add(new Pez(nombre, edad, "oceano", genero, "rojo", 6));
         Pez.salmones += 1;
     }
 
-    public void crearBacalao(String nombre, int edad, String genero, Zona zona){
-        Pez.listado.add(new Pez(nombre, edad, "oceano", genero, zona, "gris", 6));
+    public void crearBacalao(String nombre, int edad, String genero){
+        Pez.listado.add(new Pez(nombre, edad, "oceano", genero, "gris", 6));
         Pez.bacalaos += 1;
     }
 
